@@ -50,7 +50,8 @@ df['age'] = df.Founded.apply(lambda x:x if x <1 else 2021-x)
 df['Job Description'][0]
 
 #python
-df['python'] = df['Job Description'].apply(lambda x:1 if 'python' in x.lower() else 0)
+df['python_yn'] = df['Job Description'].apply(lambda x:1 if 'python' in x.lower() else 0)
+df['python_yn'].value_counts()
 
 #r-studio
 df['R_yn'] = df['Job Description'].apply(lambda x:1 if 'r studio' or 'r-studio' in x.lower() else 0)
